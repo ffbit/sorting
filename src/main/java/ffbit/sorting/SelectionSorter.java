@@ -7,26 +7,20 @@ public class SelectionSorter {
 
     public void sort(int[] sources) {
         final int length = sources.length;
-        int fromIndex = 0;
         
-        while (fromIndex < length) {
-            final int currentValue = sources[fromIndex];
-            int minValue = currentValue;
-            int swapIndex = fromIndex;
-            
-            for (int i = fromIndex; i < length; i++) {
-                if (sources[i] < minValue) {
-                    minValue = sources[i];
-                    swapIndex = i;
+        for (int i = 0; i < length; i++) {
+            int min = i;
+            for (int j = i; j < length; j++) {
+                if (sources[j] < sources[i]) {
+                    min = j;
                 }
             }
             
-            if (minValue < currentValue) {
-                sources[fromIndex] = minValue;
-                sources[swapIndex] = currentValue;
+            if (min != i) {
+                int tmp = sources[i];
+                sources[i] = sources[min];
+                sources[min] = tmp;
             }
-            
-            fromIndex++;
         }
     }
     

@@ -1,10 +1,11 @@
 package ffbit.sorting;
 
 
-public class SelectionSorter {
+public class SelectionSorter implements Sorter {
     
     public SelectionSorter() {}
-
+    
+    @Override
     public void sort(int[] sources) {
         final int length = sources.length;
         

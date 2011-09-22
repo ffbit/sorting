@@ -1,9 +1,10 @@
 package ffbit.sorting;
 
-public class BubbleSorter {
+public class BubbleSorter implements Sorter {
     
     public BubbleSorter() {}
     
+    @Override
     public void sort(int[] sources) {
         for (int i = 0; i < sources.length; i++) {
             for (int j = sources.length - 1; j > 0; j--) {

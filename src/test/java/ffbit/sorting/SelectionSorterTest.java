@@ -27,7 +27,8 @@ public class SelectionSorterTest {
         return Arrays.asList(new Object[][] {
                 {new int[] {2, 1}, new int[] {1, 2}},
                 {new int[] {3, 2, 1}, new int[] {1, 2, 3}},
-                {new int[] {7, 3, 2, 6, 1}, new int[] {1, 2, 3, 6, 7}}
+                {new int[] {7, 3, 2, 6, 1}, new int[] {1, 2, 3, 6, 7}},
+                {new int[] {2, 2, 2, 1, 1, 3, 3}, new int[] {1, 1, 2, 2, 2, 3, 3}}
         });
     }
     

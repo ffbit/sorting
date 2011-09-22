@@ -10,7 +10,7 @@ public class SelectionSorter {
         
         for (int i = 0; i < length; i++) {
             int min = i;
-            for (int j = i; j < length; j++) {
+            for (int j = i + 1; j < length; j++) {
                 if (sources[j] < sources[i]) {
                     min = j;
                 }

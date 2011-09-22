@@ -16,11 +16,9 @@ public class SelectionSorter {
                 }
             }
             
-            if (min != i) {
-                int tmp = sources[i];
-                sources[i] = sources[min];
-                sources[min] = tmp;
-            }
+            int tmp = sources[i];
+            sources[i] = sources[min];
+            sources[min] = tmp;
         }
     }
     

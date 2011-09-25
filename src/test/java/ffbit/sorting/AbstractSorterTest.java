@@ -17,7 +17,7 @@ public class AbstractSorterTest extends AbstractSorter {
 
     @Override
     public void sort(int[] array) {
-        throw new UnsupportedOperationException("Don't invoke this method!");
+        throw new UnsupportedOperationException("The method isn't implemented!");
     }
     
 }

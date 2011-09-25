@@ -12,15 +12,19 @@ public class SelectionSorter implements Sorter {
         for (int i = 0; i < length; i++) {
             int min = i;
             for (int j = i + 1; j < length; j++) {
-                if (sources[j] < sources[i]) {
+                if (sources[j] < sources[min]) {
                     min = j;
                 }
             }
             
-            int tmp = sources[i];
-            sources[i] = sources[min];
-            sources[min] = tmp;
+            swap(sources, i, min);
         }
+    }
+
+    private void swap(int[] sources, int i, int min) {
+        int tmp = sources[i];
+        sources[i] = sources[min];
+        sources[min] = tmp;
     }
     
 }

@@ -2,7 +2,7 @@ package ffbit.sorting;
 
 
 
-public class ShellSorter implements Sorter {
+public class ShellSorter extends AbstractSorter {
 
     @Override
     public void sort(int[] array) {
@@ -22,12 +22,6 @@ public class ShellSorter implements Sorter {
             
             h = h / 3;
         }
-    }
-
-    private void swap(int[] array, int from, int to) {
-        int tmp = array[from];
-        array[from] = array[to];
-        array[to] = tmp;
     }
 
 }

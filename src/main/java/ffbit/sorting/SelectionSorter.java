@@ -1,7 +1,7 @@
 package ffbit.sorting;
 
 
-public class SelectionSorter implements Sorter {
+public class SelectionSorter extends AbstractSorter {
     
     public SelectionSorter() {}
     
@@ -19,12 +19,6 @@ public class SelectionSorter implements Sorter {
             
             swap(sources, i, min);
         }
-    }
-
-    private void swap(int[] sources, int i, int min) {
-        int tmp = sources[i];
-        sources[i] = sources[min];
-        sources[min] = tmp;
     }
     
 }

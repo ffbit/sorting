@@ -22,22 +22,18 @@ public class MergeSorter implements Sorter {
         int i = 0;
         int j = 0;
         for (int k = 0; k < length; k++) {
-            if (i < left.length && j < right.length) {
-                if (left[i] < right[j]) {
-                    array[k] = left[i];
-                    i++;
+            if (i >= left.length) {
+                array[k] = right[j++];
+            } else if (j >= right.length) {
+                array[k] = left[i++];
+            } else {
+                if (left[i] <= right[j]) {
+                    array[k] = left[i++];
                 } else {
-                    array[k] = right[j];
-                    j++;
+                    array[k] = right[j++];
                 }
-            } else if (i == left.length) {
-                array[k] = right[j];
-                j++;
-            } else if (j == right.length) {
-                array[k] = left[i];
-                i++;
             }
         }
     }
-
+    
 }
